@@ -1,0 +1,38 @@
+$body: #2c3e50
+$darkblue: #1e2c39
+$white: #ffffff
+$black: #17202a
+$blue: #6bbcff
+
+.theme-dark
+    background-color: $body
+    
+    .btn, .button-modal
+        color: $blue
+    
+    .button-modal
+        background-color: $body
+
+    .theme
+        .header, .footer
+            background-color: $black
+            color: $white
+
+            button
+                background-color: $white
+                color: $black
+            button:hover
+                background-color: $blue
+                color: $white
+
+        .search
+            .searchform
+                transition: 0.3s
+                border: 2px solid $blue
+                background-color: $black !important
+                color: $white !important
+
+        .cards
+            .card
+                transition: 0.3s
+                background-color: $darkblue

@@ -1,0 +1,109 @@
+$lightred: #ffc5B5
+$red: #cb4335
+$white: #ffffff
+$black: #000000
+$body: #333333
+$darkred: #882c23
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: arial
+    background-color: $lightred
+
+::-webkit-scrollbar
+    width: 1em
+
+::-webkit-scrollbar-track
+    background: $white
+    border-radius: 1em
+
+::-webkit-scrollbar-thumb
+    background: $body
+    border-radius: 1em
+
+.btn
+    text-decoration: none
+    color: $lightred
+    font-weight: bold
+    transition: 0.3s
+
+.btn:hover
+    color: $darkred
+    transition: 0.3s
+
+.theme
+    padding-bottom: 5em
+
+    button
+        background-color: $black
+        color: $white
+        border: none
+        border-radius: 1em
+        margin-top: 10px
+        transition: 0.3s
+        width: 60px
+        height: 40px
+
+    button:hover
+        background-color: $white
+        color: $black
+        transition: 0.3s
+
+    .search
+        padding: 2rem
+
+        .searchform
+            transition: 0.3s
+            border: 2px solid $red
+            padding: 5px
+            border-radius: 5px
+            outline: none
+            display: block
+            margin: auto
+
+    .cards
+        padding: 2em
+
+        .card
+            width: 31%
+            margin: 1em
+            display: inline-block
+            transition: 0.3s
+            background-color: $red
+            color: $white
+            border-radius: 0em 0em 1em 1em
+            animation-name: showCards
+            animation-duration: 1s
+
+            img
+                width: 100%
+
+            .card-description
+                padding: 1em
+
+                h3
+                    font-size: 22px
+    
+    @keyframes showCards
+        0%
+            opacity: 0
+        100%
+            opacity: 1
+    
+    @media screen and (max-width: 1450px)
+        .cards
+            .card
+                width: 45%
+
+    @media screen and (max-width: 860px)
+        .cards
+            .card
+                width: 90%
+                display: block
+
+                .card-description
+                    h4
+                        font-size: 25px
