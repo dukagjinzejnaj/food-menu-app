@@ -9,6 +9,6 @@ export default {
 <template>
     <div class="header">
         <h1>Food Menu App</h1>
-        <button @click="$emit('btn-click-darkMode')">{{ switchMode }}</button>
+        <button class="switchMode" @click="$emit('btn-click-darkMode')">{{ switchMode }}</button>
     </div>
 </template>

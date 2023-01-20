@@ -13,6 +13,7 @@ body
     font-family: arial
     background-color: $lightred
 
+/* Scrollbar Design */
 ::-webkit-scrollbar
     width: 1em
 
@@ -24,34 +25,37 @@ body
     background: $body
     border-radius: 1em
 
-.btn
+/* Card button */
+.card-button
     text-decoration: none
     color: $lightred
     font-weight: bold
     transition: 0.3s
 
-.btn:hover
-    color: $darkred
-    transition: 0.3s
-
-.theme
-    padding-bottom: 5em
-
-    button
-        background-color: $black
-        color: $white
-        border: none
-        border-radius: 1em
-        margin-top: 10px
+    &:hover
+        color: $darkred
         transition: 0.3s
-        width: 60px
-        height: 40px
 
-    button:hover
+/* Switch mode */
+.switchMode
+    background-color: $black
+    color: $white
+    border: none
+    border-radius: 1em
+    margin-top: 10px
+    transition: 0.3s
+    width: 60px
+    height: 40px
+
+    &:hover
         background-color: $white
         color: $black
         transition: 0.3s
 
+.theme
+    padding-bottom: 5em
+
+    /* Searchform */
     .search
         padding: 2rem
 
@@ -64,6 +68,7 @@ body
             display: block
             margin: auto
 
+    /* Card */
     .cards
         padding: 2em
 
@@ -87,12 +92,14 @@ body
                 h3
                     font-size: 22px
     
+    /* Show cards */
     @keyframes showCards
         0%
             opacity: 0
         100%
             opacity: 1
     
+    /* Cards responsive */
     @media screen and (max-width: 1450px)
         .cards
             .card

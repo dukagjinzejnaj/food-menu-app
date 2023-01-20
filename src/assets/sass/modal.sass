@@ -4,6 +4,7 @@ $lightred: #ffc5B5
 $black: #000000
 $red: #cb4335
 
+/* Button */
 .button-modal
     text-decoration: none
     padding: 10px
@@ -11,51 +12,51 @@ $red: #cb4335
     color: $lightred
     background-color: $red
     font-weight: bold
-    transition: 0.3s
-    
-.button-modal:hover
-    transition: 0.3s
-    background-color: $body
 
-.theme
-    .modal-window
-        position: fixed
-        background-color: $black
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        z-index: 999
-        opacity: 0
-        visibility: hidden
-        pointer-events: none
-        transition: all 0.4s
-        &:target
-            visibility: visible
-            pointer-events: auto
-            opacity: 1
-        & > div
-            width: 400px
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-            padding: 2em
-            background: $white
-            border-radius: 1em
-        .modal-close
-            line-height: 50px
-            position: absolute
-            color: $body
-            right: 0
-            text-align: center
-            top: 0
-            width: 70px
-            text-decoration: none
-        &:hover
-            color: black
-        .modal
-            display: grid
-            justify-content: center
-            align-items: center
-            height: 100vh
+/* Open modal */
+.modal-window
+    position: fixed
+    background-color: $black
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 999
+    visibility: hidden
+    opacity: 0
+    pointer-events: none
+    transition: 0.4s
+
+    &:target
+        visibility: visible
+        opacity: 1
+        pointer-events: auto
+
+    & > div
+        color: $black
+        width: 250px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        padding: 2em
+        background: $white
+
+/* Close modal */
+.modal-close
+    color: $body
+    position: absolute
+    text-align: center
+    top: 0
+    right: 0
+    font-size: 30px
+    line-height: 50px
+    width: 70px
+    text-decoration: none
+
+/* Modal display */
+.modal
+    display: grid
+    justify-content: center
+    align-items: center
+    height: 100vh

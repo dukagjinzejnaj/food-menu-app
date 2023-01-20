@@ -3,7 +3,7 @@ export default {
     data() {
         return {
             search: "",
-            posts: [
+            textdata: [
                 { title: "McDonalds Cheese Burger Royal", link: "https://www.mcdonalds.com/", image: "./img/cheeseburger-royal.jpg" },
                 { title: "McDonalds Double Cheese Burger Bacon", link: "https://www.mcdonalds.com/", image: "./img/double-cheeseburger-bacon.jpg" },
                 { title: "McDonalds Hamburger", link: "https://www.mcdonalds.com/", image: "./img/hamburger.jpg" },
@@ -20,8 +20,8 @@ export default {
         }
     },
     computed: {
-        filteredPeople() {
-			return this.posts.filter(person => person.title.toLowerCase().includes(this.search.toLowerCase()));
+        searchFood() {
+			return this.textdata.filter(food => food.title.toLowerCase().includes(this.search.toLowerCase()));
 		}
     }
 }
@@ -32,11 +32,11 @@ export default {
         <input type="text" v-model="search" class="searchform" placeholder="Essen suchen.."/>
     </div>
     <div class="cards">
-        <div class="card" v-for="person in filteredPeople">
-            <img :src="person.image" />
+        <div class="card" v-for="food in searchFood">
+            <img :src="food.image" />
             <div class="card-description">
-                <h4>{{ person.title }}</h4>
-                <a class="btn" :href="person.link" target="_blank">Homepage</a>
+                <h4>{{ food.title }}</h4>
+                <a class="card-button" :href="food.link" target="_blank">Visit Homepage</a>
             </div>
         </div>
     </div>
