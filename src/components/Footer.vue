@@ -16,7 +16,7 @@ export default {
         <div id="open-modal" class="modal-window">
             <div>
                 <h3>{{currentDate()}}</h3>
-                <a href="#" title="Schliessen" class="modal-close">X</a>
+                <a href="#" class="modal-close">X</a>
             </div>
         </div>
     </div>

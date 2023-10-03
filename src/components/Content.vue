@@ -1,7 +1,7 @@
 <script>
-import Header from './Header.vue'
-import Card from './Card.vue'
-import Footer from './Footer.vue'
+import Card from './Card.vue';
+import Header from './Header.vue';
+import Footer from './Footer.vue';
 
 export default {
     data() {
@@ -10,8 +10,8 @@ export default {
       }
     },
     components: {
-        Header,
         Card,
+        Header,
         Footer
     },
     watch: {
@@ -34,10 +34,10 @@ export default {
 </script>
 
 <template>
-    <div class="theme">
-        <Header v-if="darkMode" @btn-click-darkMode="darkMode = !darkMode" switchMode="Light" />
-        <Header v-else @btn-click-darkMode="darkMode = !darkMode" switchMode="Dark" />
+    <Header v-if="darkMode" @btn-click-darkMode="darkMode = !darkMode" switchMode="Lightmode" />
+    <Header v-else @btn-click-darkMode="darkMode = !darkMode" switchMode="Darkmode" />
+    <div class="container-md">
         <Card />
-        <Footer />
     </div>
+    <Footer />
 </template>

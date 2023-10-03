@@ -6,33 +6,41 @@ $blue: #6bbcff
 
 .theme-dark
     background-color: $body
+    transition: 0.3s
+
+    .header
+        .switchMode
+            background-color: $white
+            color: $black
+            &:hover
+                background-color: $blue
+                transition: 0.3s
+
+    .card
+        border: 3px solid $blue
+        .card-body
+            transition: 0.3s
+            background-color: $darkblue
+            .card-title
+                color: $white
     
     .card-button, .button-modal
         color: $blue
-    
+        transition: 0.3s
+
     .button-modal
         background-color: $body
 
-    .theme
-        .header, .footer
-            background-color: $black
+    .header, .footer
+        background-color: $black
+        color: $white
+        transition: 0.3s
+
+    .search
+        .searchform
+            transition: 0.3s
+            border: 2px solid $blue !important
+            background-color: $black !important
+            color: $white !important
+        .text-center
             color: $white
-
-            .switchMode
-                background-color: $white
-                color: $black
-                &:hover
-                    background-color: $blue
-                    color: $white
-
-        .search
-            .searchform
-                transition: 0.3s
-                border: 2px solid $blue
-                background-color: $black !important
-                color: $white !important
-
-        .cards
-            .card
-                transition: 0.3s
-                background-color: $darkblue
